@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="generate-num" class="form-control" type="text" id="" disabled>
+                    <button id="generate-button" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">    
+                <div class="input-section half-width">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <form name="calculator">
+                                <input id="calculator-num" class="form-control " type="text" name="text" id="" disabled>
+                            <div class="calc-button-row">
+                              <div class="button" value="7" onclick="calculator.text.value +='7'">7</div>
+                              <div class="button" value="8" onclick="calculator.text.value +='8'">8</div>
+                              <div class="button" value="9" onclick="calculator.text.value +='9'">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button" value="4" onclick="calculator.text.value +='4'">4</div>
+                              <div class="button" value="5" onclick="calculator.text.value +='5'">5</div>
+                              <div class="button" value="6" onclick="calculator.text.value +='6'">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button" value="1" onclick="calculator.text.value +='1'">1</div>
+                              <div class="button" value="2" onclick="calculator.text.value +='2'">2</div>
+                              <div class="button" value="3" onclick="calculator.text.value +='3'">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button" value="&larr;" onclick="calculator.text.value = calculator.text.value.slice(0,-1)"><</div>
+                              <div class="button" value="0" onclick="calculator.text.value +='0'">0</div>
+                              <div class="button" value="C" onclick="calculator.text.value = ''">C</div>
+                            </div>
+                        </form>
+                            <div>
+                             <button id="submit-button" type="submit" class="submit-btn">Submit</button>
+                             <p class="action-left"><span id="action-count">3</span> try left</p>
+                            </div>                     
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="notify-section">
+            <p id="match-not" class="notify"><i class="fa fa-times-circle-o" style="color:#df1414" aria-hidden="true"></i> Pin Didn't Match, Please try again</p>
+            <p id="match" class="notify"><i class="fa fa-check" style="color: green;"  aria-hidden="true"></i> Pin Matched... Secret door is opening for you</p>
+        </div>
+     </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
